@@ -14,3 +14,5 @@ extend projection ProcessorService.Customers with {
 };
 
 annotate ProcessorService.Incidents with @odata.draft.enabled;
+
+annotate ProcessorService with @(requires: ['support']);
