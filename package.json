@@ -31,7 +31,10 @@
   ],
   "cds": {
     "requires": {
-      "auth": "mocked"
+      "[production]": {
+        "db": "hana",
+        "auth": "xsuaa"
+      }
     }
   }
 }

@@ -12,12 +12,6 @@ annotate service.Incidents with @(
                     ID : 'i18nGeneralInformation',
                     Label : '{i18n>GeneralInformation}',
                     Target : '@UI.FieldGroup#i18nGeneralInformation',
-                },
-                {
-                    $Type : 'UI.ReferenceFacet',
-                    Label : '{i18n>Details}',
-                    ID : 'i18nDetails',
-                    Target : '@UI.FieldGroup#i18nDetails',
                 },],
         },
         {
@@ -128,14 +122,7 @@ annotate service.Incidents with @(
 annotate service.Incidents with @(
     UI.FieldGroup #i18nDetails : {
         $Type : 'UI.FieldGroupType',
-        Data : [
-            {
-                $Type : 'UI.DataField',
-                Value : status_code,
-            },{
-                $Type : 'UI.DataField',
-                Value : urgency_code,
-            },],
+        Data : [],
     },
     UI.FieldGroup #i18nGeneralInformation : {
         $Type : 'UI.FieldGroupType',
@@ -149,6 +136,14 @@ annotate service.Incidents with @(
                 $Type : 'UI.DataField',
                 Value : customer_ID,
                 Label : 'Customer',
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : status_code,
+            },
+            {
+                $Type : 'UI.DataField',
+                Value : urgency_code,
             },],
     },
 );
@@ -208,3 +203,9 @@ annotate service.Incidents with @(
 annotate service.Incidents with @(
     UI.DeleteHidden : true
 );
+annotate service.Incidents with {
+    title @Common.FieldControl : #Mandatory
+};
+annotate service.Incidents with {
+    customer @Common.FieldControl : #Mandatory
+};

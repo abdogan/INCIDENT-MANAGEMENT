@@ -35,3 +35,6 @@ mta_archives/
 app/incidents/dist/nsincidents.zip
 app/incidents/dist/sap-ui-cachebuster-info.json
 resources/nsincidents.zip
+app/incidents/dist/nsincidents.zip
+app/incidents/dist/sap-ui-cachebuster-info.json
+resources/nsincidents.zip
