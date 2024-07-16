@@ -129,7 +129,8 @@
                   "tableSettings": {
                     "type": "ResponsiveTable",
                     "enableExport": false,
-                    "selectionMode": "None"
+                    "selectionMode": "Multi",
+                    "selectAll": true
                   }
                 }
               },

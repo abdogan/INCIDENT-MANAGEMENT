@@ -32,9 +32,5 @@ mta_archives/
 
 # @cap-js/cds-typer
 @cds-models
-app/incidents/dist/nsincidents.zip
-app/incidents/dist/sap-ui-cachebuster-info.json
-resources/nsincidents.zip
-app/incidents/dist/nsincidents.zip
-app/incidents/dist/sap-ui-cachebuster-info.json
-resources/nsincidents.zip
+app/incidents/dist/
+resources/

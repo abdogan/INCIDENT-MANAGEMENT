@@ -205,12 +205,25 @@ annotate service.Incidents with @(
         ],
     }
 );
-annotate service.Incidents with @(
-    UI.DeleteHidden : true
-);
 annotate service.Incidents with {
     title @Common.FieldControl : #Mandatory
 };
 annotate service.Incidents with {
     customer @Common.FieldControl : #Mandatory
 };
+annotate service.Incidents with @(
+    UI.SelectionPresentationVariant #table : {
+        $Type : 'UI.SelectionPresentationVariantType',
+        PresentationVariant : {
+            $Type : 'UI.PresentationVariantType',
+            Visualizations : [
+                '@UI.LineItem',
+            ],
+        },
+        SelectionVariant : {
+            $Type : 'UI.SelectionVariantType',
+            SelectOptions : [
+            ],
+        },
+    }
+);
