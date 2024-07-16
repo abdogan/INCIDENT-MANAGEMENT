@@ -21,6 +21,11 @@ annotate service.Incidents with @(
             Target : 'conversation/@UI.LineItem#i18nConversation1',
         },
     ],
+
+    Capabilities.SearchRestrictions: {
+        Searchable: false,
+    },
+
     UI.LineItem : [
         {
             $Type : 'UI.DataField',
