@@ -227,3 +227,13 @@ annotate service.Incidents with @(
         },
     }
 );
+annotate service.Incidents with @(
+    UI.Identification : [
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'ProcessorService.setTitle',
+            Label : '{i18n>Settitle}',
+        },
+    ]
+);
+

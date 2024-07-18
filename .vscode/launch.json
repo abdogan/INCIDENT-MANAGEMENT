@@ -10,6 +10,8 @@
       "args": [
         "serve",
         "--with-mocks",
+        "--port",
+        "4003",
         "--in-memory?"
       ],
       "skipFiles": [

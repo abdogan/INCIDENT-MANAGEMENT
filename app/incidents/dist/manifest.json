@@ -129,11 +129,13 @@
                                     "tableSettings": {
                                         "type": "ResponsiveTable",
                                         "enableExport": false,
-                                        "selectionMode": "None"
+                                        "selectionMode": "Multi",
+                                        "selectAll": true
                                     }
                                 }
                             },
-                            "initialLoad": "Enabled"
+                            "initialLoad": "Enabled",
+                            "hideFilterBar": false
                         }
                     }
                 },
