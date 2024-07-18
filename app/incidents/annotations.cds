@@ -234,6 +234,11 @@ annotate service.Incidents with @(
             Action : 'ProcessorService.setTitle',
             Label : '{i18n>Settitle}',
         },
+        {
+            $Type : 'UI.DataFieldForAction',
+            Action : 'ProcessorService.setUrgencyHigh',
+            Label : '{i18n>Seturgencyhigh}',
+        },
     ]
 );
 

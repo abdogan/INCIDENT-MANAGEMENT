@@ -8,6 +8,10 @@ service ProcessorService {
         @( cds.odata.bindingparameter.name : '_it',
         Common.SideEffects : {TargetProperties : ['_it/title']} ) 
         action setTitle(title: tyTitle @mandatory @title : 'New Title' );
+        
+        @( cds.odata.bindingparameter.name : '_it',
+        Common.SideEffects : {TargetProperties : ['_it/urgency']} ) 
+        action setUrgencyHigh( );
     };
 
     @readonly

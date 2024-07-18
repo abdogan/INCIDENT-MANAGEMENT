@@ -8,6 +8,7 @@ class ProcessorService extends cds.ApplicationService {
         this.before('UPDATE', 'Incidents', (req) => this.onUpdate(req));
         this.before('CREATE', 'Incidents', (req) => this.changeUrgencyDueToSubject(req.data));
         this.on( 'setTitle', (req) => this.actionSetTitle(req));
+        this.on( 'setUrgencyHigh', (req) => this.actionsetUrgencyHigh(req));
 
         return super.init();
     }
@@ -34,6 +35,12 @@ class ProcessorService extends cds.ApplicationService {
         let sTitle = req.data.title;
         let ID = req.params[0].ID; 
         let oSucceeded = await UPDATE (Incidents) .set({title: sTitle}) .where({ID: ID} );
+    }
+
+    async actionsetUrgencyHigh(req) {
+        let sTitle = req.data.title;
+        let ID = req.params[0].ID; 
+        let oSucceeded = await UPDATE (Incidents) .set({urgency: { code: "H", descr: "High"}}) .where({ID: ID} );
     }
 
 }
